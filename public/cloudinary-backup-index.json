@@ -1,0 +1,1108 @@
+{
+  "backedUpAt": "2026-09-07T07:52:19.163Z",
+  "total": 220,
+  "successCount": 220,
+  "failCount": 0,
+  "results": {
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783876135/admin_image/mb6oa2z6yaco50phspce.jpg": {
+      "localPath": "cloudinary_images_backup/1_mb6oa2z6yaco50phspce.jpg",
+      "size": 254861,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777833225/admin_image/pxstg1cwwvweujeqjevh.jpg": {
+      "localPath": "cloudinary_images_backup/2_pxstg1cwwvweujeqjevh.jpg",
+      "size": 551366,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648208/admin_image/xpzhd4jcfqijtm4bgfip.jpg": {
+      "localPath": "cloudinary_images_backup/3_xpzhd4jcfqijtm4bgfip.jpg",
+      "size": 108756,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1788378672/admin_image/cu7ijzxozfpjpomuvw2u.jpg": {
+      "localPath": "cloudinary_images_backup/4_cu7ijzxozfpjpomuvw2u.jpg",
+      "size": 295741,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786268790/admin_image/odn3hfwjeppn6jxleacl.jpg": {
+      "localPath": "cloudinary_images_backup/5_odn3hfwjeppn6jxleacl.jpg",
+      "size": 185227,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787085723/admin_image/fc8qw1xqkqqwftqna3kz.jpg": {
+      "localPath": "cloudinary_images_backup/6_fc8qw1xqkqqwftqna3kz.jpg",
+      "size": 341665,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787385527/admin_image/mvhkagiiebsdyoyl0war.jpg": {
+      "localPath": "cloudinary_images_backup/7_mvhkagiiebsdyoyl0war.jpg",
+      "size": 232573,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783333116/admin_image/znsedyzkqpqf5mm7aulk.jpg": {
+      "localPath": "cloudinary_images_backup/8_znsedyzkqpqf5mm7aulk.jpg",
+      "size": 201065,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786801993/admin_image/n1mgcfnxwdkelgnifdcx.png": {
+      "localPath": "cloudinary_images_backup/9_n1mgcfnxwdkelgnifdcx.png",
+      "size": 2156446,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648801/admin_image/pdcxpbicx4s8gn1lsd5x.jpg": {
+      "localPath": "cloudinary_images_backup/10_pdcxpbicx4s8gn1lsd5x.jpg",
+      "size": 105748,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1788098490/admin_image/mkc9rqmgplxu3qzqbojh.jpg": {
+      "localPath": "cloudinary_images_backup/11_mkc9rqmgplxu3qzqbojh.jpg",
+      "size": 87570,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780595129/admin_image/vtbg7bkgraylhibgmrvy.jpg": {
+      "localPath": "cloudinary_images_backup/12_vtbg7bkgraylhibgmrvy.jpg",
+      "size": 284394,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777737922/admin_image/gbbmm6igpil0x7ryrx6n.jpg": {
+      "localPath": "cloudinary_images_backup/13_gbbmm6igpil0x7ryrx6n.jpg",
+      "size": 91187,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783536631/admin_image/wkrbu9qhblvdwd7zyftf.jpg": {
+      "localPath": "cloudinary_images_backup/14_wkrbu9qhblvdwd7zyftf.jpg",
+      "size": 347365,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780647670/admin_image/hp5gco5ofyymvd9lxvwr.jpg": {
+      "localPath": "cloudinary_images_backup/15_hp5gco5ofyymvd9lxvwr.jpg",
+      "size": 31066,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787782087/admin_image/qdrpmunzmmtknbq8lupz.jpg": {
+      "localPath": "cloudinary_images_backup/16_qdrpmunzmmtknbq8lupz.jpg",
+      "size": 362605,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1781035718/admin_image/izjfxznuzxuzicwuwqnt.png": {
+      "localPath": "cloudinary_images_backup/17_izjfxznuzxuzicwuwqnt.png",
+      "size": 315263,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1781444233/admin_image/tjl3wcu2j7txbbnfxqy0.png": {
+      "localPath": "cloudinary_images_backup/18_tjl3wcu2j7txbbnfxqy0.png",
+      "size": 1607842,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1788378769/admin_image/dnrduspu8bzi7we1tebh.png": {
+      "localPath": "cloudinary_images_backup/19_dnrduspu8bzi7we1tebh.png",
+      "size": 1130101,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787575582/admin_image/e1aefywvlx0ajdqq0edb.jpg": {
+      "localPath": "cloudinary_images_backup/20_e1aefywvlx0ajdqq0edb.jpg",
+      "size": 393911,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648712/admin_image/grno262sw1bpo5nvtq1u.jpg": {
+      "localPath": "cloudinary_images_backup/21_grno262sw1bpo5nvtq1u.jpg",
+      "size": 69159,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786270345/admin_image/ilnmux7nlkmlpzsjkft5.jpg": {
+      "localPath": "cloudinary_images_backup/22_ilnmux7nlkmlpzsjkft5.jpg",
+      "size": 105132,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777737352/admin_image/vllbjifbmz1oxlr3z7q9.jpg": {
+      "localPath": "cloudinary_images_backup/23_vllbjifbmz1oxlr3z7q9.jpg",
+      "size": 133639,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648689/admin_image/zd7jrvqo09mi9pfzait4.jpg": {
+      "localPath": "cloudinary_images_backup/24_zd7jrvqo09mi9pfzait4.jpg",
+      "size": 78070,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648258/admin_image/arlwuqj90fm0scu3burb.jpg": {
+      "localPath": "cloudinary_images_backup/25_arlwuqj90fm0scu3burb.jpg",
+      "size": 16734,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783876191/admin_image/s7e3fu1vihozs1krxdyn.jpg": {
+      "localPath": "cloudinary_images_backup/26_s7e3fu1vihozs1krxdyn.jpg",
+      "size": 269701,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783536705/admin_image/iajo1lt2428hylf4flt6.jpg": {
+      "localPath": "cloudinary_images_backup/27_iajo1lt2428hylf4flt6.jpg",
+      "size": 290059,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787677780/admin_image/uwrfwfzynkkesfi5ntsw.jpg": {
+      "localPath": "cloudinary_images_backup/28_uwrfwfzynkkesfi5ntsw.jpg",
+      "size": 175016,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786097856/admin_image/bml2a8n7fpc70d4gc680.jpg": {
+      "localPath": "cloudinary_images_backup/29_bml2a8n7fpc70d4gc680.jpg",
+      "size": 300361,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787067179/admin_image/ajlqpo6zdxjfgoixbsnq.jpg": {
+      "localPath": "cloudinary_images_backup/30_ajlqpo6zdxjfgoixbsnq.jpg",
+      "size": 131119,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777910581/admin_image/cnb8nacfb0wltizcoitu.jpg": {
+      "localPath": "cloudinary_images_backup/31_cnb8nacfb0wltizcoitu.jpg",
+      "size": 176681,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787140253/admin_image/qrbv8ntsqexjulhek7go.jpg": {
+      "localPath": "cloudinary_images_backup/32_qrbv8ntsqexjulhek7go.jpg",
+      "size": 161792,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786644785/admin_image/fb4che3cxqvxcayezybx.jpg": {
+      "localPath": "cloudinary_images_backup/33_fb4che3cxqvxcayezybx.jpg",
+      "size": 212860,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783340278/admin_image/ptmiqlchq3lfaxeatord.jpg": {
+      "localPath": "cloudinary_images_backup/34_ptmiqlchq3lfaxeatord.jpg",
+      "size": 300973,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783536599/admin_image/gbpfykh2z8akczyot1bv.jpg": {
+      "localPath": "cloudinary_images_backup/35_gbpfykh2z8akczyot1bv.jpg",
+      "size": 267089,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787487873/admin_image/pn2yvkhkluw7fvw92syp.jpg": {
+      "localPath": "cloudinary_images_backup/36_pn2yvkhkluw7fvw92syp.jpg",
+      "size": 41508,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648734/admin_image/cck5ufq3fxks3cdpjvqf.jpg": {
+      "localPath": "cloudinary_images_backup/37_cck5ufq3fxks3cdpjvqf.jpg",
+      "size": 69259,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648940/admin_image/eoi9lvnkivalth0vxbep.jpg": {
+      "localPath": "cloudinary_images_backup/38_eoi9lvnkivalth0vxbep.jpg",
+      "size": 66860,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777827776/admin_image/tbp2k4fu6uz4x3x5rwfa.jpg": {
+      "localPath": "cloudinary_images_backup/39_tbp2k4fu6uz4x3x5rwfa.jpg",
+      "size": 832990,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786791746/admin_image/savueq2a5k1qmk63ac1q.png": {
+      "localPath": "cloudinary_images_backup/40_savueq2a5k1qmk63ac1q.png",
+      "size": 2494540,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648823/admin_image/cwwos5ouu0grexs0blv8.jpg": {
+      "localPath": "cloudinary_images_backup/41_cwwos5ouu0grexs0blv8.jpg",
+      "size": 100333,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648869/admin_image/r0fghgiokprqxun43nkf.jpg": {
+      "localPath": "cloudinary_images_backup/42_r0fghgiokprqxun43nkf.jpg",
+      "size": 126425,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786266121/admin_image/swewxjug9hdgcir6rhte.jpg": {
+      "localPath": "cloudinary_images_backup/43_swewxjug9hdgcir6rhte.jpg",
+      "size": 152846,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783530890/admin_image/p3ggctbyse4g8ck4cm6v.jpg": {
+      "localPath": "cloudinary_images_backup/44_p3ggctbyse4g8ck4cm6v.jpg",
+      "size": 301376,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778169098/admin_image/axv9x6a8ttmelq8cobry.jpg": {
+      "localPath": "cloudinary_images_backup/45_axv9x6a8ttmelq8cobry.jpg",
+      "size": 514180,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778256296/admin_image/sujfamptm4xl88b59p4j.jpg": {
+      "localPath": "cloudinary_images_backup/46_sujfamptm4xl88b59p4j.jpg",
+      "size": 328311,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786097911/admin_image/o3zwzo4wyfynjfpu9uya.jpg": {
+      "localPath": "cloudinary_images_backup/47_o3zwzo4wyfynjfpu9uya.jpg",
+      "size": 253122,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783876347/admin_image/csz3kyacovko91wmv1fd.jpg": {
+      "localPath": "cloudinary_images_backup/48_csz3kyacovko91wmv1fd.jpg",
+      "size": 255799,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648781/admin_image/spx426cp4aslbdduongw.jpg": {
+      "localPath": "cloudinary_images_backup/49_spx426cp4aslbdduongw.jpg",
+      "size": 90530,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787066930/admin_image/grktk9l57cth3di6sxae.png": {
+      "localPath": "cloudinary_images_backup/50_grktk9l57cth3di6sxae.png",
+      "size": 566680,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778070292/admin_image/lj5nyrwc0pprwkbiqm9h.jpg": {
+      "localPath": "cloudinary_images_backup/51_lj5nyrwc0pprwkbiqm9h.jpg",
+      "size": 364343,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648916/admin_image/veyo0g3setqcsndwglgm.jpg": {
+      "localPath": "cloudinary_images_backup/52_veyo0g3setqcsndwglgm.jpg",
+      "size": 58729,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780647830/admin_image/sxifed2fluxe2mr1ss8t.jpg": {
+      "localPath": "cloudinary_images_backup/53_sxifed2fluxe2mr1ss8t.jpg",
+      "size": 139127,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777916930/admin_image/zsyhzxzu81jxtaklbsrz.jpg": {
+      "localPath": "cloudinary_images_backup/54_zsyhzxzu81jxtaklbsrz.jpg",
+      "size": 184594,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648159/admin_image/nxunhecjuwzmzlgszexa.jpg": {
+      "localPath": "cloudinary_images_backup/55_nxunhecjuwzmzlgszexa.jpg",
+      "size": 100702,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786097983/admin_image/mlftigccriyauapz5g5d.jpg": {
+      "localPath": "cloudinary_images_backup/56_mlftigccriyauapz5g5d.jpg",
+      "size": 231290,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648886/admin_image/xwdxa3mrmr9ji26iysuj.jpg": {
+      "localPath": "cloudinary_images_backup/57_xwdxa3mrmr9ji26iysuj.jpg",
+      "size": 76730,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783876251/admin_image/sgb7rtrnk9bw4gp6vs3m.jpg": {
+      "localPath": "cloudinary_images_backup/58_sgb7rtrnk9bw4gp6vs3m.jpg",
+      "size": 270556,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783333207/admin_image/t5wmf65qnzttuw9fxvdr.jpg": {
+      "localPath": "cloudinary_images_backup/59_t5wmf65qnzttuw9fxvdr.jpg",
+      "size": 174920,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777922120/admin_image/dfws7nxjksfs8lkgt46c.jpg": {
+      "localPath": "cloudinary_images_backup/60_dfws7nxjksfs8lkgt46c.jpg",
+      "size": 287772,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778185721/admin_image/vvchmqi8iu7gujmyizr9.jpg": {
+      "localPath": "cloudinary_images_backup/61_vvchmqi8iu7gujmyizr9.jpg",
+      "size": 273042,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921372/admin_image/qjwt4ovfewgsic6eddu8.png": {
+      "localPath": "cloudinary_images_backup/62_qjwt4ovfewgsic6eddu8.png",
+      "size": 2081434,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783536744/admin_image/iphp1dkyqceigtaidnlj.jpg": {
+      "localPath": "cloudinary_images_backup/63_iphp1dkyqceigtaidnlj.jpg",
+      "size": 230626,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783536671/admin_image/a4ycgl7vizbnswh2roc2.jpg": {
+      "localPath": "cloudinary_images_backup/64_a4ycgl7vizbnswh2roc2.jpg",
+      "size": 289141,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786791445/admin_image/qun1sri6mrwnslyiza3g.png": {
+      "localPath": "cloudinary_images_backup/65_qun1sri6mrwnslyiza3g.png",
+      "size": 2134428,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787242383/admin_image/isgeggipdo1djeoyxu98.png": {
+      "localPath": "cloudinary_images_backup/66_isgeggipdo1djeoyxu98.png",
+      "size": 3109806,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780648844/admin_image/dg2bbrywziejqtiotyhh.jpg": {
+      "localPath": "cloudinary_images_backup/67_dg2bbrywziejqtiotyhh.jpg",
+      "size": 87669,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1780689878/admin_image/bl72ji7ckwyxesmw1xo0.png": {
+      "localPath": "cloudinary_images_backup/68_bl72ji7ckwyxesmw1xo0.png",
+      "size": 1622209,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787595707/admin_image/yuiye9ehhnrotvcl90ek.jpg": {
+      "localPath": "cloudinary_images_backup/69_yuiye9ehhnrotvcl90ek.jpg",
+      "size": 226673,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777720049/admin_homeLogo/bsxn6a8jxy6yfbyh56df.png": {
+      "localPath": "cloudinary_images_backup/70_bsxn6a8jxy6yfbyh56df.png",
+      "size": 241137,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777841244/admin_logo/fpjoepth9okjaedlcj97.png": {
+      "localPath": "cloudinary_images_backup/71_fpjoepth9okjaedlcj97.png",
+      "size": 93920,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786266811/admin_logo/nuzc32cczrp3mczzwbj4.png": {
+      "localPath": "cloudinary_images_backup/72_nuzc32cczrp3mczzwbj4.png",
+      "size": 183395,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777841848/admin_logo/saklqh4e0k3h9spgefkb.png": {
+      "localPath": "cloudinary_images_backup/73_saklqh4e0k3h9spgefkb.png",
+      "size": 24390,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777841906/admin_logo/zryf71bhu9l6fnkxlh0b.png": {
+      "localPath": "cloudinary_images_backup/74_zryf71bhu9l6fnkxlh0b.png",
+      "size": 110574,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786267585/admin_logo/qcltagjjapw38osu8ll5.png": {
+      "localPath": "cloudinary_images_backup/75_qcltagjjapw38osu8ll5.png",
+      "size": 121332,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777895332/admin_logo/rqc1364kz89hvftt6jfd.png": {
+      "localPath": "cloudinary_images_backup/76_rqc1364kz89hvftt6jfd.png",
+      "size": 241137,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786267402/admin_logo/jkgjstjav4s8jkrg9qsh.png": {
+      "localPath": "cloudinary_images_backup/77_jkgjstjav4s8jkrg9qsh.png",
+      "size": 68094,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777841874/admin_logo/kg4dhc7rmrqjzepuin4c.png": {
+      "localPath": "cloudinary_images_backup/78_kg4dhc7rmrqjzepuin4c.png",
+      "size": 95151,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786267311/admin_logo/xigvomra3suzlh5u86jx.png": {
+      "localPath": "cloudinary_images_backup/79_xigvomra3suzlh5u86jx.png",
+      "size": 108265,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786267791/admin_logo/ge8nukel9zfplx3tsqbh.png": {
+      "localPath": "cloudinary_images_backup/80_ge8nukel9zfplx3tsqbh.png",
+      "size": 96726,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777895410/admin_logo/gwrbaohb9gnyky6ywoyu.png": {
+      "localPath": "cloudinary_images_backup/81_gwrbaohb9gnyky6ywoyu.png",
+      "size": 191351,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777895292/admin_logo/rfbyqjogilkatgvuubbn.png": {
+      "localPath": "cloudinary_images_backup/82_rfbyqjogilkatgvuubbn.png",
+      "size": 7657,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777840596/admin_logo/okvks0tyfavl4nxaxaob.png": {
+      "localPath": "cloudinary_images_backup/83_okvks0tyfavl4nxaxaob.png",
+      "size": 105247,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777841254/admin_logo/m9v8ksflulgcm3joouxp.png": {
+      "localPath": "cloudinary_images_backup/84_m9v8ksflulgcm3joouxp.png",
+      "size": 145975,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777895372/admin_logo/ss2i6fqo7pbzbpd8udjk.png": {
+      "localPath": "cloudinary_images_backup/85_ss2i6fqo7pbzbpd8udjk.png",
+      "size": 95523,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777895312/admin_logo/cnrx4cycrlhzxw28of1x.png": {
+      "localPath": "cloudinary_images_backup/86_cnrx4cycrlhzxw28of1x.png",
+      "size": 82073,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777840884/admin_logo/uzh5yribedxmviyungge.png": {
+      "localPath": "cloudinary_images_backup/87_uzh5yribedxmviyungge.png",
+      "size": 55169,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777844085/admin_logo/dssti22ndiqrdz23am5u.png": {
+      "localPath": "cloudinary_images_backup/88_dssti22ndiqrdz23am5u.png",
+      "size": 118819,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777841577/admin_logo/msy9twtpl4z6xjw3y2tk.png": {
+      "localPath": "cloudinary_images_backup/89_msy9twtpl4z6xjw3y2tk.png",
+      "size": 19024,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786312895/admin_thumbnailUrl/q5jongtvqktspoth6cos.jpg": {
+      "localPath": "cloudinary_images_backup/90_q5jongtvqktspoth6cos.jpg",
+      "size": 257328,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786312908/admin_url/xxnsocourxbc7n5fnfjs.jpg": {
+      "localPath": "cloudinary_images_backup/91_xxnsocourxbc7n5fnfjs.jpg",
+      "size": 257328,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098447/admin_url/h53e9wn7sjjzdf3bzbgi.jpg": {
+      "localPath": "cloudinary_images_backup/92_h53e9wn7sjjzdf3bzbgi.jpg",
+      "size": 275558,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787577018/admin_url/sb4s93t2jt0awmjwxz7u.jpg": {
+      "localPath": "cloudinary_images_backup/93_sb4s93t2jt0awmjwxz7u.jpg",
+      "size": 165831,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426149/admin_url/c2q6y6vvelyvmqjvmk1j.jpg": {
+      "localPath": "cloudinary_images_backup/94_c2q6y6vvelyvmqjvmk1j.jpg",
+      "size": 358957,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921816/admin_url/rpaembuirfgffyfpiwto.jpg": {
+      "localPath": "cloudinary_images_backup/95_rpaembuirfgffyfpiwto.jpg",
+      "size": 230536,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783332971/admin_url/atbzri6hegbok1tqsbac.jpg": {
+      "localPath": "cloudinary_images_backup/96_atbzri6hegbok1tqsbac.jpg",
+      "size": 208171,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783333333/admin_url/vwgmho2huflmoe8hikm1.jpg": {
+      "localPath": "cloudinary_images_backup/97_vwgmho2huflmoe8hikm1.jpg",
+      "size": 263972,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921631/admin_thumbnailUrl/bm4qx3gbjpfmsgtvwqzd.jpg": {
+      "localPath": "cloudinary_images_backup/98_bm4qx3gbjpfmsgtvwqzd.jpg",
+      "size": 231705,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921637/admin_url/iqccz3hsbdqwpwvpor0d.jpg": {
+      "localPath": "cloudinary_images_backup/99_iqccz3hsbdqwpwvpor0d.jpg",
+      "size": 231705,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426530/admin_url/yp3gbucke7ayuaubbnf7.jpg": {
+      "localPath": "cloudinary_images_backup/100_yp3gbucke7ayuaubbnf7.jpg",
+      "size": 309009,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921540/admin_url/qm5uip23422llzx8tpst.jpg": {
+      "localPath": "cloudinary_images_backup/101_qm5uip23422llzx8tpst.jpg",
+      "size": 226875,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426364/admin_url/w4ibassfbibatalu8np8.jpg": {
+      "localPath": "cloudinary_images_backup/102_w4ibassfbibatalu8np8.jpg",
+      "size": 345036,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921690/admin_url/aaeesgontsjticugoani.jpg": {
+      "localPath": "cloudinary_images_backup/103_aaeesgontsjticugoani.jpg",
+      "size": 192610,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921619/admin_url/gx06wrvfthsenrtsmpit.jpg": {
+      "localPath": "cloudinary_images_backup/104_gx06wrvfthsenrtsmpit.jpg",
+      "size": 223940,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098349/admin_url/xslc1djyjlzfxbw1xu0h.jpg": {
+      "localPath": "cloudinary_images_backup/105_xslc1djyjlzfxbw1xu0h.jpg",
+      "size": 156919,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098314/admin_thumbnailUrl/ahxnlhg4sz9d4bwqyrze.jpg": {
+      "localPath": "cloudinary_images_backup/106_ahxnlhg4sz9d4bwqyrze.jpg",
+      "size": 394217,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098330/admin_url/da65cscjfvbptrgcknu7.jpg": {
+      "localPath": "cloudinary_images_backup/107_da65cscjfvbptrgcknu7.jpg",
+      "size": 394217,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098243/admin_url/f5gxtjtblkwsjp5mxhzm.jpg": {
+      "localPath": "cloudinary_images_backup/108_f5gxtjtblkwsjp5mxhzm.jpg",
+      "size": 338096,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426478/admin_thumbnailUrl/c9l3tnqag5yt8qq0ghgg.jpg": {
+      "localPath": "cloudinary_images_backup/109_c9l3tnqag5yt8qq0ghgg.jpg",
+      "size": 344621,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426499/admin_url/ilai7jq7y0mjsiksaqdb.jpg": {
+      "localPath": "cloudinary_images_backup/110_ilai7jq7y0mjsiksaqdb.jpg",
+      "size": 344621,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426389/admin_url/gr9xkczhae7iavhqpphw.jpg": {
+      "localPath": "cloudinary_images_backup/111_gr9xkczhae7iavhqpphw.jpg",
+      "size": 276384,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426383/admin_thumbnailUrl/ck0rpptwbatyurd7akfo.jpg": {
+      "localPath": "cloudinary_images_backup/112_ck0rpptwbatyurd7akfo.jpg",
+      "size": 276384,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786313916/admin_url/le7vtm95bwfhxrqlyc83.jpg": {
+      "localPath": "cloudinary_images_backup/113_le7vtm95bwfhxrqlyc83.jpg",
+      "size": 309309,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921804/admin_url/wwzohdjwial4o91wparr.jpg": {
+      "localPath": "cloudinary_images_backup/114_wwzohdjwial4o91wparr.jpg",
+      "size": 86929,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921713/admin_url/ghvzeumkzngkoxjufepq.jpg": {
+      "localPath": "cloudinary_images_backup/115_ghvzeumkzngkoxjufepq.jpg",
+      "size": 233158,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921566/admin_url/mi3k3vawpey1r1fszijq.jpg": {
+      "localPath": "cloudinary_images_backup/116_mi3k3vawpey1r1fszijq.jpg",
+      "size": 212034,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787077187/admin_url/xo27kardjmwjsyzyyxos.jpg": {
+      "localPath": "cloudinary_images_backup/117_xo27kardjmwjsyzyyxos.jpg",
+      "size": 210533,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786312926/admin_url/ltkxmdvn6zy1sth9tct9.jpg": {
+      "localPath": "cloudinary_images_backup/118_ltkxmdvn6zy1sth9tct9.jpg",
+      "size": 471290,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777917047/admin_url/bma1b42dhfh3lk3gz2bq.jpg": {
+      "localPath": "cloudinary_images_backup/119_bma1b42dhfh3lk3gz2bq.jpg",
+      "size": 127920,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098196/admin_thumbnailUrl/urhxxbrijqr8sr0nc9b4.jpg": {
+      "localPath": "cloudinary_images_backup/120_urhxxbrijqr8sr0nc9b4.jpg",
+      "size": 284080,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098206/admin_url/qnrxcqe6gda6zxendauy.jpg": {
+      "localPath": "cloudinary_images_backup/121_qnrxcqe6gda6zxendauy.jpg",
+      "size": 284080,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098292/admin_url/iou5vajefjfz1dfgnpvb.jpg": {
+      "localPath": "cloudinary_images_backup/122_iou5vajefjfz1dfgnpvb.jpg",
+      "size": 382917,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921461/admin_url/hogsg5uratiwoqnlofaa.jpg": {
+      "localPath": "cloudinary_images_backup/123_hogsg5uratiwoqnlofaa.jpg",
+      "size": 189012,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921480/admin_url/lduyuplmctcuutnd5fjx.jpg": {
+      "localPath": "cloudinary_images_backup/124_lduyuplmctcuutnd5fjx.jpg",
+      "size": 141785,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777917007/admin_url/obxjl6ehw3x8ktuh4xtp.jpg": {
+      "localPath": "cloudinary_images_backup/125_obxjl6ehw3x8ktuh4xtp.jpg",
+      "size": 184594,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426580/admin_url/h2ajae6zoqhrrk74natm.jpg": {
+      "localPath": "cloudinary_images_backup/126_h2ajae6zoqhrrk74natm.jpg",
+      "size": 285234,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098424/admin_url/hzfnm7scrizn1d3u9zed.jpg": {
+      "localPath": "cloudinary_images_backup/127_hzfnm7scrizn1d3u9zed.jpg",
+      "size": 418144,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098057/admin_url/yg0ijtbsnynusc0uu6xv.jpg": {
+      "localPath": "cloudinary_images_backup/128_yg0ijtbsnynusc0uu6xv.jpg",
+      "size": 370152,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1784921590/admin_url/gexbbxiaegiradq63gql.jpg": {
+      "localPath": "cloudinary_images_backup/129_gexbbxiaegiradq63gql.jpg",
+      "size": 239635,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426591/admin_url/shahq8jrhk79y5lzm7wp.jpg": {
+      "localPath": "cloudinary_images_backup/130_shahq8jrhk79y5lzm7wp.jpg",
+      "size": 383634,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786314016/admin_url/ltzcfpidku3a5jkzg0p6.jpg": {
+      "localPath": "cloudinary_images_backup/131_ltzcfpidku3a5jkzg0p6.jpg",
+      "size": 335138,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1783340385/admin_url/ewmkmuqhhooqelh8kjj1.jpg": {
+      "localPath": "cloudinary_images_backup/132_ewmkmuqhhooqelh8kjj1.jpg",
+      "size": 198038,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098267/admin_url/adctiubh9jgwemmplbtm.jpg": {
+      "localPath": "cloudinary_images_backup/133_adctiubh9jgwemmplbtm.jpg",
+      "size": 338103,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1782426429/admin_url/zvunnsuqil3dotdsetur.jpg": {
+      "localPath": "cloudinary_images_backup/134_zvunnsuqil3dotdsetur.jpg",
+      "size": 347382,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098411/admin_url/n1ogt4uj34huywydykzc.jpg": {
+      "localPath": "cloudinary_images_backup/135_n1ogt4uj34huywydykzc.jpg",
+      "size": 248535,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098172/admin_url/lxzzehcxpjdm0xsd3xz3.jpg": {
+      "localPath": "cloudinary_images_backup/136_lxzzehcxpjdm0xsd3xz3.jpg",
+      "size": 345717,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098127/admin_url/snzprgeqi4bzvbm3nbys.jpg": {
+      "localPath": "cloudinary_images_backup/137_snzprgeqi4bzvbm3nbys.jpg",
+      "size": 317032,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786098119/admin_thumbnailUrl/c0ivh2sm534znlseglna.jpg": {
+      "localPath": "cloudinary_images_backup/138_c0ivh2sm534znlseglna.jpg",
+      "size": 317032,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777924360/admin_imageUrl/afnojr81wb5jza5ceppd.jpg": {
+      "localPath": "cloudinary_images_backup/139_afnojr81wb5jza5ceppd.jpg",
+      "size": 132465,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777924507/admin_imageUrl/w7uxxgolyhmpzo9m4xpf.jpg": {
+      "localPath": "cloudinary_images_backup/140_w7uxxgolyhmpzo9m4xpf.jpg",
+      "size": 126942,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786883102/profile_avatars/ok70fpr3oxkeswdmilue.jpg": {
+      "localPath": "cloudinary_images_backup/141_ok70fpr3oxkeswdmilue.jpg",
+      "size": 152435,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777913846/profile_avatars/smhdrttxeger53qaxujf.jpg": {
+      "localPath": "cloudinary_images_backup/142_smhdrttxeger53qaxujf.jpg",
+      "size": 117991,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786618302/profile_avatars/yos65sy4po54xcycpsup.png": {
+      "localPath": "cloudinary_images_backup/143_yos65sy4po54xcycpsup.png",
+      "size": 1572291,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778097095/profile_avatars/i0bgddnmmaz8v5btgeax.jpg": {
+      "localPath": "cloudinary_images_backup/144_i0bgddnmmaz8v5btgeax.jpg",
+      "size": 429285,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786790722/profile_avatars/htxasj4bhnlnmanme6lr.png": {
+      "localPath": "cloudinary_images_backup/145_htxasj4bhnlnmanme6lr.png",
+      "size": 2491975,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786620280/profile_avatars/gudwgpfpqvx6sgmvubv7.jpg": {
+      "localPath": "cloudinary_images_backup/146_gudwgpfpqvx6sgmvubv7.jpg",
+      "size": 307692,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786636009/profile_avatars/fh6bksjgukvjhfjlknmh.jpg": {
+      "localPath": "cloudinary_images_backup/147_fh6bksjgukvjhfjlknmh.jpg",
+      "size": 178579,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786740253/profile_avatars/ktrpyegxk6e4lf62bfub.jpg": {
+      "localPath": "cloudinary_images_backup/148_ktrpyegxk6e4lf62bfub.jpg",
+      "size": 218885,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786636035/profile_avatars/bcftb2yhguqmec8pdcpn.jpg": {
+      "localPath": "cloudinary_images_backup/149_bcftb2yhguqmec8pdcpn.jpg",
+      "size": 33893,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786576695/profile_avatars/mgcqhgpugitu62knxqaw.jpg": {
+      "localPath": "cloudinary_images_backup/150_mgcqhgpugitu62knxqaw.jpg",
+      "size": 26194,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786844861/profile_avatars/zdyfxaalzj8bpbxw3hxc.jpg": {
+      "localPath": "cloudinary_images_backup/151_zdyfxaalzj8bpbxw3hxc.jpg",
+      "size": 98592,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786375872/profile_avatars/mv5dfhhogvitqgemrtpn.jpg": {
+      "localPath": "cloudinary_images_backup/152_mv5dfhhogvitqgemrtpn.jpg",
+      "size": 197267,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778593894/profile_avatars/yaftrrezo3zo5v5sxmy0.jpg": {
+      "localPath": "cloudinary_images_backup/153_yaftrrezo3zo5v5sxmy0.jpg",
+      "size": 264803,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786787833/profile_avatars/v7gb0dl93jcp8kd5yfjt.jpg": {
+      "localPath": "cloudinary_images_backup/154_v7gb0dl93jcp8kd5yfjt.jpg",
+      "size": 143768,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777897561/profile_avatars/kjnelhmljc8ivd2d4fm3.jpg": {
+      "localPath": "cloudinary_images_backup/155_kjnelhmljc8ivd2d4fm3.jpg",
+      "size": 2717675,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787584037/profile_avatars/nckiyv66wqzpkcu80v2c.jpg": {
+      "localPath": "cloudinary_images_backup/156_nckiyv66wqzpkcu80v2c.jpg",
+      "size": 213812,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778089441/profile_avatars/ixumezhpiucj4rztruzn.heic": {
+      "localPath": "cloudinary_images_backup/157_ixumezhpiucj4rztruzn.heic",
+      "size": 1572695,
+      "contentType": "image/heic"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786687403/profile_avatars/ugmvwbydtyotqbdsvce3.jpg": {
+      "localPath": "cloudinary_images_backup/158_ugmvwbydtyotqbdsvce3.jpg",
+      "size": 40031,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786653371/profile_avatars/tqhf8yp2bihcrpoyaefk.png": {
+      "localPath": "cloudinary_images_backup/159_tqhf8yp2bihcrpoyaefk.png",
+      "size": 1487620,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787416614/profile_avatars/yukcxx0nlxidqj3g0zd9.jpg": {
+      "localPath": "cloudinary_images_backup/160_yukcxx0nlxidqj3g0zd9.jpg",
+      "size": 129955,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777759418/profile_avatars/blxtvbbtrtiryfmfxxbe.png": {
+      "localPath": "cloudinary_images_backup/161_blxtvbbtrtiryfmfxxbe.png",
+      "size": 7233954,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786691117/profile_avatars/p2mgbhjfdnfyutvaopp0.jpg": {
+      "localPath": "cloudinary_images_backup/162_p2mgbhjfdnfyutvaopp0.jpg",
+      "size": 178491,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1788371514/profile_avatars/kzdr5mnfofcosvsjbist.jpg": {
+      "localPath": "cloudinary_images_backup/163_kzdr5mnfofcosvsjbist.jpg",
+      "size": 119861,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777939326/profile_avatars/plobee5n3kzim6z0ufpi.jpg": {
+      "localPath": "cloudinary_images_backup/164_plobee5n3kzim6z0ufpi.jpg",
+      "size": 142573,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778096215/profile_avatars/g0rc4jedhihy4cs2rz81.jpg": {
+      "localPath": "cloudinary_images_backup/165_g0rc4jedhihy4cs2rz81.jpg",
+      "size": 202035,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777921252/profile_avatars/pfgfvaiqkqucd3mlusxt.jpg": {
+      "localPath": "cloudinary_images_backup/166_pfgfvaiqkqucd3mlusxt.jpg",
+      "size": 69236,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778190008/profile_avatars/vnhisfisplcqrxnzc4mk.jpg": {
+      "localPath": "cloudinary_images_backup/167_vnhisfisplcqrxnzc4mk.jpg",
+      "size": 33554,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778116644/profile_avatars/zpejjfanptkrfrckzj3u.jpg": {
+      "localPath": "cloudinary_images_backup/168_zpejjfanptkrfrckzj3u.jpg",
+      "size": 60481,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786694633/profile_avatars/v4jdsgetko9o9qcghasz.png": {
+      "localPath": "cloudinary_images_backup/169_v4jdsgetko9o9qcghasz.png",
+      "size": 2092206,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777894663/profile_avatars/jyd0ct5yapx0avcrx2gf.jpg": {
+      "localPath": "cloudinary_images_backup/170_jyd0ct5yapx0avcrx2gf.jpg",
+      "size": 755808,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786621774/profile_avatars/yg6lctmoel0178ya2flm.jpg": {
+      "localPath": "cloudinary_images_backup/171_yg6lctmoel0178ya2flm.jpg",
+      "size": 211863,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777720340/profile_avatars/q4dir6pv3w2nfl2jsu4h.jpg": {
+      "localPath": "cloudinary_images_backup/172_q4dir6pv3w2nfl2jsu4h.jpg",
+      "size": 3189222,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786655373/profile_avatars/xvvjpyvstlfvrz8d1iz5.jpg": {
+      "localPath": "cloudinary_images_backup/173_xvvjpyvstlfvrz8d1iz5.jpg",
+      "size": 245680,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786582010/profile_avatars/tj8ozmg5pxcijfbixwxm.png": {
+      "localPath": "cloudinary_images_backup/174_tj8ozmg5pxcijfbixwxm.png",
+      "size": 2366041,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786632103/profile_avatars/lpc3blb64pkp0udohyhv.png": {
+      "localPath": "cloudinary_images_backup/175_lpc3blb64pkp0udohyhv.png",
+      "size": 1473011,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786722183/profile_avatars/zk3lni8mly90gckn1clw.jpg": {
+      "localPath": "cloudinary_images_backup/176_zk3lni8mly90gckn1clw.jpg",
+      "size": 53808,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786699925/profile_avatars/owby6jvznrqqu1bnxevm.jpg": {
+      "localPath": "cloudinary_images_backup/177_owby6jvznrqqu1bnxevm.jpg",
+      "size": 265394,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777727070/profile_avatars/smifmg0fvutl6zp93jz0.jpg": {
+      "localPath": "cloudinary_images_backup/178_smifmg0fvutl6zp93jz0.jpg",
+      "size": 216904,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787416375/profile_avatars/sdsypjieovrvohzbm5tq.jpg": {
+      "localPath": "cloudinary_images_backup/179_sdsypjieovrvohzbm5tq.jpg",
+      "size": 182780,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786608083/profile_avatars/vi4w8u4goh4ylm0k6jwd.jpg": {
+      "localPath": "cloudinary_images_backup/180_vi4w8u4goh4ylm0k6jwd.jpg",
+      "size": 178300,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786624124/profile_avatars/fzyug8etune82we5lsi0.jpg": {
+      "localPath": "cloudinary_images_backup/181_fzyug8etune82we5lsi0.jpg",
+      "size": 146949,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786067101/profile_avatars/fso5k4mje9vzykxwwvfj.jpg": {
+      "localPath": "cloudinary_images_backup/182_fso5k4mje9vzykxwwvfj.jpg",
+      "size": 239134,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777725140/profile_avatars/jgzwa0xnyszgvtj6azu5.jpg": {
+      "localPath": "cloudinary_images_backup/183_jgzwa0xnyszgvtj6azu5.jpg",
+      "size": 6124847,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786748180/profile_avatars/kptoaw9whpuvxlfpvo3i.png": {
+      "localPath": "cloudinary_images_backup/184_kptoaw9whpuvxlfpvo3i.png",
+      "size": 1054124,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786659372/profile_avatars/roaqmkilw5whencnbj6k.jpg": {
+      "localPath": "cloudinary_images_backup/185_roaqmkilw5whencnbj6k.jpg",
+      "size": 442955,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778845887/profile_avatars/emy3wq6moqcxqplszvmv.jpg": {
+      "localPath": "cloudinary_images_backup/186_emy3wq6moqcxqplszvmv.jpg",
+      "size": 167826,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778172486/profile_avatars/yylmtxnbzqran7w6auxt.jpg": {
+      "localPath": "cloudinary_images_backup/187_yylmtxnbzqran7w6auxt.jpg",
+      "size": 86330,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786638472/profile_avatars/mry42xacqsvuokoobfqn.jpg": {
+      "localPath": "cloudinary_images_backup/188_mry42xacqsvuokoobfqn.jpg",
+      "size": 243816,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786275028/profile_avatars/e9qqzf9rdzoga4lzs3qe.jpg": {
+      "localPath": "cloudinary_images_backup/189_e9qqzf9rdzoga4lzs3qe.jpg",
+      "size": 28134,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787247107/profile_avatars/ov3wcmb74s3fes618xma.jpg": {
+      "localPath": "cloudinary_images_backup/190_ov3wcmb74s3fes618xma.jpg",
+      "size": 63533,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778344623/profile_avatars/pagldvzuo4dupmbu0bdj.jpg": {
+      "localPath": "cloudinary_images_backup/191_pagldvzuo4dupmbu0bdj.jpg",
+      "size": 212192,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1788691813/profile_avatars/yokrm6wkqn9lqf60hm7h.jpg": {
+      "localPath": "cloudinary_images_backup/192_yokrm6wkqn9lqf60hm7h.jpg",
+      "size": 317433,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786611548/profile_avatars/pk5wc3nkawzdixy9ehmq.jpg": {
+      "localPath": "cloudinary_images_backup/193_pk5wc3nkawzdixy9ehmq.jpg",
+      "size": 422162,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1781183617/profile_avatars/ryrswvud8cgjfcodqrww.jpg": {
+      "localPath": "cloudinary_images_backup/194_ryrswvud8cgjfcodqrww.jpg",
+      "size": 299515,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786823294/profile_avatars/ylofa33x5xsgrnnmq5nj.jpg": {
+      "localPath": "cloudinary_images_backup/195_ylofa33x5xsgrnnmq5nj.jpg",
+      "size": 208019,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778405589/profile_avatars/ekljg7ocr7rrvkdcpuh1.jpg": {
+      "localPath": "cloudinary_images_backup/196_ekljg7ocr7rrvkdcpuh1.jpg",
+      "size": 309101,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787341574/profile_avatars/ad6wysnidmhyycanvtrw.jpg": {
+      "localPath": "cloudinary_images_backup/197_ad6wysnidmhyycanvtrw.jpg",
+      "size": 195004,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787257192/profile_avatars/msweanmhxor9k0ajymgl.png": {
+      "localPath": "cloudinary_images_backup/198_msweanmhxor9k0ajymgl.png",
+      "size": 625459,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786702047/profile_avatars/vy6zxxzknapzsrukot99.png": {
+      "localPath": "cloudinary_images_backup/199_vy6zxxzknapzsrukot99.png",
+      "size": 1611865,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777922452/profile_avatars/pxy95xggv8xhhypenqd5.jpg": {
+      "localPath": "cloudinary_images_backup/200_pxy95xggv8xhhypenqd5.jpg",
+      "size": 7612,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786327882/profile_avatars/slnqcedjwhsyv8xia0w5.jpg": {
+      "localPath": "cloudinary_images_backup/201_slnqcedjwhsyv8xia0w5.jpg",
+      "size": 40730,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786650364/profile_avatars/avnpqsci3ilip0b0tgjo.jpg": {
+      "localPath": "cloudinary_images_backup/202_avnpqsci3ilip0b0tgjo.jpg",
+      "size": 145805,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778797561/profile_avatars/yzjjjnrcmkibwkvgse7j.jpg": {
+      "localPath": "cloudinary_images_backup/203_yzjjjnrcmkibwkvgse7j.jpg",
+      "size": 302142,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777914313/profile_avatars/qjjauqerugumrbzd9k6h.jpg": {
+      "localPath": "cloudinary_images_backup/204_qjjauqerugumrbzd9k6h.jpg",
+      "size": 134230,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786060037/profile_avatars/rrylfo9vaxbj54ixy25x.jpg": {
+      "localPath": "cloudinary_images_backup/205_rrylfo9vaxbj54ixy25x.jpg",
+      "size": 170827,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787418323/profile_avatars/gqcnbk0aneaovxl26lfy.jpg": {
+      "localPath": "cloudinary_images_backup/206_gqcnbk0aneaovxl26lfy.jpg",
+      "size": 49493,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787606067/profile_avatars/hnavxrjdulzmqqn6ovd0.png": {
+      "localPath": "cloudinary_images_backup/207_hnavxrjdulzmqqn6ovd0.png",
+      "size": 1049970,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787587882/profile_avatars/bl7uxf69fae9hhh0aiz0.png": {
+      "localPath": "cloudinary_images_backup/208_bl7uxf69fae9hhh0aiz0.png",
+      "size": 2044277,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1787333876/profile_avatars/vdgmjjcuuydubx6fjngq.jpg": {
+      "localPath": "cloudinary_images_backup/209_vdgmjjcuuydubx6fjngq.jpg",
+      "size": 183555,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786784755/profile_avatars/rvjorsj8vzo2pztmeosz.jpg": {
+      "localPath": "cloudinary_images_backup/210_rvjorsj8vzo2pztmeosz.jpg",
+      "size": 117864,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778066157/profile_avatars/duqo5asionrjwnvc3xdk.jpg": {
+      "localPath": "cloudinary_images_backup/211_duqo5asionrjwnvc3xdk.jpg",
+      "size": 29204,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786613850/profile_avatars/lq6anhbsrvkddwhpldam.jpg": {
+      "localPath": "cloudinary_images_backup/212_lq6anhbsrvkddwhpldam.jpg",
+      "size": 182605,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786718485/profile_avatars/ihshngvpdnaegtz7nc0w.jpg": {
+      "localPath": "cloudinary_images_backup/213_ihshngvpdnaegtz7nc0w.jpg",
+      "size": 68215,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1778118742/profile_avatars/iz5dkpa3j8clw7f9lpwn.jpg": {
+      "localPath": "cloudinary_images_backup/214_iz5dkpa3j8clw7f9lpwn.jpg",
+      "size": 153627,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1781264124/profile_avatars/nlxwfwjizhftiftteoos.jpg": {
+      "localPath": "cloudinary_images_backup/215_nlxwfwjizhftiftteoos.jpg",
+      "size": 236171,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786786328/profile_avatars/rwwdpry0kpx0ujuzf9j6.png": {
+      "localPath": "cloudinary_images_backup/216_rwwdpry0kpx0ujuzf9j6.png",
+      "size": 1777743,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777908145/profile_avatars/durbz4c1wchhpygfghmo.jpg": {
+      "localPath": "cloudinary_images_backup/217_durbz4c1wchhpygfghmo.jpg",
+      "size": 202257,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777810448/profile_avatars/qqeglemhfvvmxpknjweq.png": {
+      "localPath": "cloudinary_images_backup/218_qqeglemhfvvmxpknjweq.png",
+      "size": 1279673,
+      "contentType": "image/png"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1786105185/profile_avatars/yzuauzlag8s6ty01av5i.jpg": {
+      "localPath": "cloudinary_images_backup/219_yzuauzlag8s6ty01av5i.jpg",
+      "size": 241205,
+      "contentType": "image/jpeg"
+    },
+    "https://res.cloudinary.com/dqj6gzwfg/image/upload/v1777911155/profile_avatars/vbf2rtyxkej1eoifujef.jpg": {
+      "localPath": "cloudinary_images_backup/220_vbf2rtyxkej1eoifujef.jpg",
+      "size": 275679,
+      "contentType": "image/jpeg"
+    }
+  }
+}

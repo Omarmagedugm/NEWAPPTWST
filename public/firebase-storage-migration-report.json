@@ -1,0 +1,9 @@
+{
+  "status": "pending_bucket_activation",
+  "bucket": "gen-lang-client-0026252792.firebasestorage.app",
+  "error": "Bucket not initialized. Visit Firebase Console to enable Storage.",
+  "consoleUrl": "https://console.firebase.google.com/project/gen-lang-client-0026252792/storage",
+  "updatedAt": "2026-09-07T12:19:17.775Z",
+  "verifiedCount": 0,
+  "total": 220
+}
