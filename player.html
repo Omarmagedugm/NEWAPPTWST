@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Live Player</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .player {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      background: rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="player">
+
+  <video
+    id="video"
+    controls
+    autoplay
+    muted
+    playsinline
+    preload="auto">
+  </video>
+
+  <div id="loading" class="loading">
+    جاري تحميل البث...
+  </div>
+
+</div>
+
+<script>
+  const video = document.getElementById("video");
+  const loading = document.getElementById("loading");
+
+  const streamUrl =
+    "https://fastly.live.brightcove.com/6386028928112/us-east-1/6416013238001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoieWN3Ymx1LmVncmVzcy5zenkzeHgiLCJhY2NvdW50X2lkIjoiNjQxNjAxMzIzODAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE2MDEzMjM4MDAxIl0sImp0aSI6IjYzODYwMjg5MjgxMTIifQ.7pBZHXb93BJ47HBrEiPQvSquoHi92NStYSX3JKYcznQ/playlist-hls.m3u8";
+
+  if (Hls.isSupported()) {
+
+    const hls = new Hls({
+      enableWorker: true,
+      lowLatencyMode: true
+    });
+
+    hls.loadSource(streamUrl);
+    hls.attachMedia(video);
+
+    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+      loading.classList.add("hidden");
+
+      video.play().catch(() => {
+        // المتصفح قد يمنع التشغيل التلقائي
+      });
+    });
+
+    hls.on(Hls.Events.ERROR, function (event, data) {
+      if (data.fatal) {
+        loading.textContent = "تعذر تحميل البث";
+      }
+    });
+
+  } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+
+    video.src = streamUrl;
+
+    video.addEventListener("loadedmetadata", function () {
+      loading.classList.add("hidden");
+
+      video.play().catch(() => {});
+    });
+
+  } else {
+
+    loading.textContent = "المتصفح لا يدعم تشغيل البث";
+  }
+</script>
+
+</body>
+</html>

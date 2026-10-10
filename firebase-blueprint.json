@@ -1,0 +1,736 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["user", "admin"] },
+        "roles": { "type": "array", "items": { "type": "string" } },
+        "avatar": { "type": "string" },
+        "location": { "type": "string" },
+        "joinDate": { "type": "string" },
+        "stats": {
+          "type": "object",
+          "properties": {
+            "predictions": { "type": "number" },
+            "comments": { "type": "number" },
+            "favorites": { "type": "number" }
+          }
+        }
+      },
+      "required": ["uid", "name", "email", "role"]
+    },
+    "News": {
+      "title": "News",
+      "description": "News articles and RSS feeds",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "image": { "type": "string" },
+        "category": { "type": "string" },
+        "date": { "type": "string" },
+        "author": { "type": "string" },
+        "type": { "type": "string", "enum": ["manual", "rss"] },
+        "rssUrl": { "type": "string" }
+      }
+    },
+    "Match": {
+      "title": "Match",
+      "description": "Match score and details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "homeTeam": { "type": "string" },
+        "awayTeam": { "type": "string" },
+        "homeLogo": { "type": "string" },
+        "awayLogo": { "type": "string" },
+        "homeScore": { "type": "string" },
+        "awayScore": { "type": "string" },
+        "date": { "type": "string" },
+        "competition": { "type": "string" },
+        "status": { "type": "string", "enum": ["upcoming", "live", "finished"] },
+        "sport": { "type": "string", "enum": ["football", "basketball"] }
+      }
+    },
+    "CityInfo": {
+      "title": "City Info",
+      "description": "Information about a city (weather, sunset, etc)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "cityName": { "type": "string" },
+        "temperature": { "type": "string" },
+        "condition": { "type": "string" },
+        "sunset": { "type": "string" },
+        "sunrise": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "active": { "type": "boolean" }
+      }
+    },
+    "Club": {
+      "title": "Club",
+      "description": "Club name and logo",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "logo": { "type": "string" }
+      }
+    },
+    "Poll": {
+      "title": "Poll",
+      "description": "Fan polls",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "question": { "type": "string" },
+        "options": { "type": "array", "items": { "type": "string" } },
+        "votes": { "type": "object" },
+        "voters": { "type": "array", "items": { "type": "string" } },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Prediction": {
+      "title": "Prediction",
+      "description": "User match prediction",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "matchId": { "type": "string" },
+        "userId": { "type": "string" },
+        "homeScore": { "type": "number" },
+        "awayScore": { "type": "number" },
+        "userName": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "FanPost": {
+      "title": "Fan Post",
+      "description": "User shared post in fan zone",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "content": { "type": "string" },
+        "image": { "type": "string" },
+        "likes": { "type": "number" },
+        "likedBy": { "type": "array", "items": { "type": "string" } },
+        "commentsCount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Media": {
+      "title": "Media",
+      "description": "Photos and videos",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string" },
+        "thumbnail": { "type": "string" },
+        "type": { "type": "string", "enum": ["photo", "video"] },
+        "source": { "type": "string", "enum": ["upload", "youtube", "embed"] },
+        "playlistId": { "type": "string" },
+        "duration": { "type": "string" },
+        "views": { "type": "number" },
+        "date": { "type": "string" }
+      }
+    },
+    "MediaPlaylist": {
+      "title": "Media Playlist",
+      "description": "Group of media items",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "type": { "type": "string", "enum": ["photo", "video"] },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "LiveComment": {
+      "title": "Live Comment",
+      "description": "Comments in live chat",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "AppSetting": {
+      "title": "App Setting",
+      "description": "Global application settings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "appName": { "type": "string" },
+        "appLogo": { "type": "string" },
+        "logoType": { "type": "string", "enum": ["image", "text"] },
+        "logoText": { "type": "string" },
+        "defaultSport": { "type": "string", "enum": ["auto", "football", "basketball"] }
+      }
+    },
+    "FCMToken": {
+      "title": "FCM Token",
+      "description": "Firebase Cloud Messaging token for push notifications",
+      "type": "object",
+      "properties": {
+        "token": { "type": "string" },
+        "userId": { "type": "string" },
+        "lastSeen": { "type": "string" },
+        "platform": { "type": "string" },
+        "userAgent": { "type": "string" },
+        "isPWA": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["active", "inactive"] }
+      }
+    },
+    "Jerseys": {
+      "title": "Club Jerseys",
+      "description": "Jerseys available for AI transformation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["name", "url"]
+    },
+    "AIConfig": {
+      "title": "AI Feature Configuration",
+      "description": "Settings for the AI jersey try-on feature",
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "clubLogo": { "type": "string" },
+        "bannerTitle": { "type": "string" },
+        "bannerDescription": { "type": "string" },
+        "bannerImage": { "type": "string" },
+        "promptInstructions": { "type": "string" }
+      }
+    },
+    "MatchDayMoment": {
+      "title": "Match Day Moment",
+      "description": "User shared photo and comment specifically for match day",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "content": { "type": "string" },
+        "image": { "type": "string" },
+        "matchId": { "type": "string" },
+        "likes": { "type": "number" },
+        "likedBy": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "MatchDayAttendance": {
+      "title": "Match Day Attendance",
+      "description": "Attendance poll for match day",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "matchId": { "type": "string" },
+        "votes": { 
+          "type": "object",
+          "properties": {
+            "yes": { "type": "number" },
+            "no": { "type": "number" },
+            "maybe": { "type": "number" }
+          }
+        },
+        "voters": { "type": "object", "description": "Mapping of userId to their choice" }
+      }
+    },
+    "AdBanner": {
+      "title": "Ad Banner",
+      "description": "Advertising space banners",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "image": { "type": "string" },
+        "link": { "type": "string" },
+        "active": { "type": "boolean" },
+        "order": { "type": "number" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "CustomPage": {
+      "title": "Custom Page",
+      "description": "Custom HTML/Iframe pages",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "content": { "type": "string" },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "ClubCommittee": {
+      "title": "Club Committee",
+      "description": "Social club committee",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "president": { "type": "string" },
+        "vicePresident": { "type": "string" },
+        "icon": { "type": "string" },
+        "image": { "type": "string" },
+        "status": { "type": "string", "enum": ["active", "inactive"] },
+        "order": { "type": "number" }
+      }
+    },
+    "ClubAnnouncement": {
+      "title": "Club Announcement",
+      "description": "Digital notice board announcement for club members",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "image": { "type": "string" },
+        "category": { "type": "string" },
+        "priority": { "type": "string", "enum": ["urgent", "important", "normal"] },
+        "committeeId": { "type": "string" },
+        "pinned": { "type": "boolean" },
+        "active": { "type": "boolean" },
+        "createdAt": { "type": "string" },
+        "validUntil": { "type": "string" }
+      }
+    },
+    "ClubService": {
+      "title": "Club Service",
+      "description": "Social club service for members",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "location": { "type": "string" },
+        "workingHours": { "type": "string" },
+        "phone": { "type": "string" },
+        "requirements": { "type": "string" },
+        "image": { "type": "string" },
+        "active": { "type": "boolean" },
+        "order": { "type": "number" }
+      }
+    },
+    "ClubMembersSettings": {
+      "title": "Club Members Settings",
+      "description": "General settings for club members section",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "phoneHotline": { "type": "string" },
+        "workingHours": { "type": "string" },
+        "memberNotice": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "ClubTrip": {
+      "title": "Club Trip",
+      "description": "Social club organized trip and excursion for members",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "destination": { "type": "string" },
+        "startDate": { "type": "string" },
+        "endDate": { "type": "string" },
+        "priceMember": { "type": "number" },
+        "priceNonMember": { "type": "number" },
+        "features": { "type": "string" },
+        "requirements": { "type": "string" },
+        "maxParticipants": { "type": "number" },
+        "image": { "type": "string" },
+        "status": { "type": "string", "enum": ["upcoming", "ongoing", "completed", "cancelled"] },
+        "active": { "type": "boolean" },
+        "order": { "type": "number" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "MemberDiscount": {
+      "title": "Member Discount Provider",
+      "description": "Medical and service discounts for club members",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "address": { "type": "string" },
+        "location": { "type": "string" },
+        "discountDetails": { "type": "string" },
+        "phoneNumbers": { "type": "string" },
+        "mapsUrl": { "type": "string" },
+        "websiteUrl": { "type": "string" },
+        "coverImage": { "type": "string" },
+        "active": { "type": "boolean" },
+        "featured": { "type": "boolean" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["name", "category", "address", "discountDetails", "phoneNumbers"]
+    },
+    "Business": {
+      "title": "Business Directory Item",
+      "description": "Ittihadawy fan community business listing",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "ownerName": { "type": "string" },
+        "businessName": { "type": "string" },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "phone": { "type": "string" },
+        "whatsapp": { "type": "string" },
+        "address": { "type": "string" },
+        "mapsUrl": { "type": "string" },
+        "instagramUrl": { "type": "string" },
+        "facebookUrl": { "type": "string" },
+        "websiteUrl": { "type": "string" },
+        "coverImage": { "type": "string" },
+        "gallery": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected", "suspended", "deleted"] },
+        "featured": { "type": "boolean" },
+        "rejectionReason": { "type": "string" },
+        "adminNotes": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" },
+        "approvedAt": { "type": "string" }
+      },
+      "required": ["ownerId", "businessName", "category", "description", "phone", "address", "coverImage", "status"]
+    },
+    "BusinessUpdate": {
+      "title": "Business Edit Request",
+      "description": "Pending update request for an approved business",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "businessId": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "BusinessReport": {
+      "title": "Business Report",
+      "description": "User report against a business listing",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "businessId": { "type": "string" },
+        "businessName": { "type": "string" },
+        "reason": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "resolved", "dismissed"] },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "WorldCountry": {
+      "title": "World Country",
+      "description": "Country where Ittihad fans reside",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "nameAr": { "type": "string" },
+        "nameEn": { "type": "string" },
+        "code": { "type": "string" },
+        "flag": { "type": "string" },
+        "region": { "type": "string" },
+        "fanCount": { "type": "number" },
+        "activeGroupsCount": { "type": "number" },
+        "coordinates": { "type": "object" },
+        "order": { "type": "number" },
+        "featured": { "type": "boolean" },
+        "active": { "type": "boolean" }
+      }
+    },
+    "WorldGroup": {
+      "title": "World Group (League/Association)",
+      "description": "Official or recognized regional Ittihad fans league/group",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "countryId": { "type": "string" },
+        "countryName": { "type": "string" },
+        "countryFlag": { "type": "string" },
+        "city": { "type": "string" },
+        "description": { "type": "string" },
+        "logo": { "type": "string" },
+        "coverImage": { "type": "string" },
+        "status": { "type": "string", "enum": ["official", "pending", "community", "inactive"] },
+        "adminUid": { "type": "string" },
+        "adminName": { "type": "string" },
+        "adminPhone": { "type": "string" },
+        "memberCount": { "type": "number" },
+        "eventsCount": { "type": "number" },
+        "postsCount": { "type": "number" },
+        "galleryCount": { "type": "number" },
+        "foundedYear": { "type": "string" },
+        "socialLinks": { "type": "object" },
+        "whatsappGroupUrl": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "featured": { "type": "boolean" },
+        "active": { "type": "boolean" }
+      }
+    },
+    "WorldPost": {
+      "title": "World Post",
+      "description": "Post shared in World Fans community or specific group",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "groupId": { "type": "string" },
+        "groupName": { "type": "string" },
+        "countryCode": { "type": "string" },
+        "countryName": { "type": "string" },
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorAvatar": { "type": "string" },
+        "content": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "category": { "type": "string" },
+        "likes": { "type": "number" },
+        "likedBy": { "type": "array", "items": { "type": "string" } },
+        "commentsCount": { "type": "number" },
+        "pinned": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "WorldEvent": {
+      "title": "World Event",
+      "description": "Event/Match viewing gathering organized by World fans league",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "groupId": { "type": "string" },
+        "groupName": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "type": { "type": "string", "enum": ["match_viewing", "gathering", "sports_activity", "celebration", "other"] },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "location": { "type": "string" },
+        "city": { "type": "string" },
+        "countryName": { "type": "string" },
+        "mapsUrl": { "type": "string" },
+        "image": { "type": "string" },
+        "participantsCount": { "type": "number" },
+        "participantUids": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": "string", "enum": ["upcoming", "ongoing", "completed", "cancelled"] },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "WorldHelpRequest": {
+      "title": "World Help Request (دليل المغترب)",
+      "description": "Help request or inquiry by expatriate fans",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "userAvatar": { "type": "string" },
+        "countryId": { "type": "string" },
+        "countryName": { "type": "string" },
+        "city": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "status": { "type": "string", "enum": ["open", "resolved", "closed"] },
+        "repliesCount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "WorldGroupApplication": {
+      "title": "World Group Application",
+      "description": "Request to establish a new regional fans league",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "applicantUid": { "type": "string" },
+        "applicantName": { "type": "string" },
+        "applicantPhone": { "type": "string" },
+        "applicantEmail": { "type": "string" },
+        "proposedGroupName": { "type": "string" },
+        "countryName": { "type": "string" },
+        "countryCode": { "type": "string" },
+        "cityName": { "type": "string" },
+        "estimatedMembers": { "type": "number" },
+        "activitiesPlan": { "type": "string" },
+        "whatsappGroupUrl": { "type": "string" },
+        "socialMediaLink": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"] },
+        "rejectionReason": { "type": "string" },
+        "adminNotes": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "AuditLog": {
+      "title": "Audit Log",
+      "description": "Supervisor activity logs and recycle bin snapshots for deleted/modified items",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "action": { "type": "string", "enum": ["delete", "create", "update", "restore"] },
+        "collectionName": { "type": "string" },
+        "collectionLabel": { "type": "string" },
+        "itemId": { "type": "string" },
+        "itemTitle": { "type": "string" },
+        "itemThumbnail": { "type": "string" },
+        "itemData": { "type": "object" },
+        "performedBy": {
+          "type": "object",
+          "properties": {
+            "uid": { "type": "string" },
+            "name": { "type": "string" },
+            "email": { "type": "string" },
+            "role": { "type": "string" },
+            "avatar": { "type": "string" }
+          }
+        },
+        "timestamp": { "type": "string" },
+        "status": { "type": "string", "enum": ["active", "deleted", "restored"] },
+        "details": { "type": "string" }
+      },
+      "required": ["id", "action", "collectionName", "itemId", "timestamp"]
+    },
+    "Song": {
+      "title": "Song / Audio Chant",
+      "description": "Songs and chants in the club audio library",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "artist": { "type": "string" },
+        "albumId": { "type": "string" },
+        "audioUrl": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "duration": { "type": "string" },
+        "category": { "type": "string" },
+        "hidden": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Album": {
+      "title": "Music Album",
+      "description": "Music albums in the club library",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "artist": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "year": { "type": "string" },
+        "songIds": { "type": "array", "items": { "type": "string" } },
+        "hidden": { "type": "boolean" }
+      }
+    },
+    "Playlist": {
+      "title": "Audio Playlist",
+      "description": "Custom playlists of songs and chants",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "songIds": { "type": "array", "items": { "type": "string" } },
+        "hidden": { "type": "boolean" }
+      }
+    },
+    "Book": {
+      "title": "Club Book / Document",
+      "description": "Books and historical documents in the library",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "coverUrl": { "type": "string" },
+        "pdfUrl": { "type": "string" },
+        "desc": { "type": "string" },
+        "category": { "type": "string" },
+        "hidden": { "type": "boolean" }
+      }
+    },
+    "AppImage": {
+      "title": "AppImage",
+      "description": "Firestore-stored image binaries, data and metadata",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "contentType": { "type": "string" },
+        "size": { "type": "number" },
+        "data": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["name", "data"]
+    }
+  },
+  "firestore": {
+    "app_images": { "schema": "AppImage", "description": "Collection of images stored directly in Firestore" },
+    "users": { "schema": "User", "description": "Collection of user profiles" },
+    "news": { "schema": "News", "description": "Collection of news articles" },
+    "matches": { "schema": "Match", "description": "Collection of matches" },
+    "clubs": { "schema": "Club", "description": "Collection of club logos" },
+    "polls": { "schema": "Poll", "description": "Collection of fan polls" },
+    "predictions": { "schema": "Prediction", "description": "Collection of match predictions" },
+    "fan_posts": { "schema": "FanPost", "description": "Community posts" },
+    "media": { "schema": "Media", "description": "Collection of media items" },
+    "media_playlists": { "schema": "MediaPlaylist", "description": "Collection of media playlists" },
+    "songs": { "schema": "Song", "description": "Collection of songs and audio recordings" },
+    "albums": { "schema": "Album", "description": "Collection of music albums" },
+    "playlists": { "schema": "Playlist", "description": "Collection of audio playlists" },
+    "books": { "schema": "Book", "description": "Collection of books and documents" },
+    "live_comments": { "schema": "LiveComment", "description": "Live match comments" },
+    "city_info": { "schema": "CityInfo", "description": "Alexandria city and weather info" },
+    "settings": { "schema": "AppSetting", "description": "Global settings" },
+    "fcm_tokens": { "schema": "FCMToken", "description": "Collection of FCM tokens" },
+    "match_day_moments": { "schema": "MatchDayMoment", "description": "Fan photos for match day" },
+    "match_day_attendance": { "schema": "MatchDayAttendance", "description": "Match day attendance polls" },
+    "ads": { "schema": "AdBanner", "description": "Advertising banners" },
+    "custom_pages": { "schema": "CustomPage", "description": "Custom HTML pages" },
+    "jerseys": { "schema": "Jerseys", "description": "Club jerseys for AI try-on" },
+    "ai_usage": { "schema": "object", "description": "AI usage quota tracking" },
+    "ai_generation_logs": { "schema": "object", "description": "AI generation history" },
+    "club_committees": { "schema": "ClubCommittee", "description": "Social club committees" },
+    "club_announcements": { "schema": "ClubAnnouncement", "description": "Member announcements and notice board" },
+    "club_services": { "schema": "ClubService", "description": "Social club services" },
+    "club_members_settings": { "schema": "ClubMembersSettings", "description": "Club member general settings" },
+    "club_trips": { "schema": "ClubTrip", "description": "Social club trips and excursions" },
+    "member_discounts": { "schema": "MemberDiscount", "description": "Medical and service discounts for club members" },
+    "businesses": { "schema": "Business", "description": "Ittihadawy community business directory" },
+    "business_updates": { "schema": "BusinessUpdate", "description": "Pending business edit requests" },
+    "business_reports": { "schema": "BusinessReport", "description": "Reports submitted for business listings" },
+    "world_countries": { "schema": "WorldCountry", "description": "Countries with Ittihad expatriate fans" },
+    "world_groups": { "schema": "WorldGroup", "description": "Regional Ittihad fans leagues and communities" },
+    "world_posts": { "schema": "WorldPost", "description": "Community posts and moments from fans abroad" },
+    "world_events": { "schema": "WorldEvent", "description": "Match viewing gatherings and activities abroad" },
+    "world_help_requests": { "schema": "WorldHelpRequest", "description": "Expatriate support and guides directory" },
+    "world_applications": { "schema": "WorldGroupApplication", "description": "Applications to found new leagues" },
+    "audit_logs": { "schema": "AuditLog", "description": "Collection of supervisor audit logs and trash snapshots" }
+  }
+}

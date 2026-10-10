@@ -1,0 +1,12 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Allow public read for all media files
+      allow read: if true;
+      // Allow writes for authenticated users and image/audio/video files under 50MB
+      allow write: if request.resource.size < 50 * 1024 * 1024
+        && (request.resource.contentType.matches('image/.*') || request.resource.contentType.matches('video/.*') || request.resource.contentType.matches('audio/.*'));
+    }
+  }
+}

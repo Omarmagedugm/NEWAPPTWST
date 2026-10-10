@@ -1,0 +1,8 @@
+{
+  "name": "قناة الاتحاد السكندري",
+  "description": "لوحة تحكم وإدارة لتطبيق قناة الاتحاد السكندري - سيد البلد",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

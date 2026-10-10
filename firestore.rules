@@ -1,0 +1,512 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Global Helpers
+    function isSignedIn() { return request.auth != null; }
+    function isEmailVerified() { return request.auth.token.email_verified == true; }
+    
+    function isAdmin() { 
+      return isSignedIn() && (
+        request.auth.token.get('email', '').lower() == 'copyrightofficialco@gmail.com' || 
+        request.auth.token.get('email', '').lower() == 'omarmagedugm@ittihad.club' ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && (
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'admin' ||
+          (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('roles', []) is list && 
+           get(/databases/$(database)/documents/users/$(request.auth.uid)).data.roles.hasAny(['admin']))
+        ))
+      );
+    }
+
+    function hasAnyRole(rolesList) {
+      return isSignedIn() && (
+        (request.auth.token.get('email', '').lower() == 'copyrightofficialco@gmail.com' || request.auth.token.get('email', '').lower() == 'omarmagedugm@ittihad.club') ||
+        (exists(/databases/$(database)/documents/users/$(request.auth.uid)) && (
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'admin' ||
+          (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('roles', []) is list && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.roles.hasAny(['admin'])) ||
+          get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') in rolesList || 
+          (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('roles', []) is list && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.roles.hasAny(rolesList)) ||
+          (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'writer' && 'news_editor' in rolesList) ||
+          (get(/databases/$(database)/documents/users/$(request.auth.uid)).data.get('role', 'user') == 'moderator' && ('user_manager' in rolesList || 'media_editor' in rolesList || 'news_editor' in rolesList))
+        ))
+      );
+    }
+
+    function isNewsEditor() { return hasAnyRole(['news_editor', 'writer']); }
+    function isMediaEditor() { return hasAnyRole(['media_editor']); }
+    function isMatchesEditor() { return hasAnyRole(['matches_editor']); }
+    function isUserManager() { return hasAnyRole(['user_manager', 'moderator']); }
+    function isLayoutEditor() { return hasAnyRole(['layout_editor']); }
+    function isStoreEditor() { return hasAnyRole(['store_editor']); }
+    function isWriter() { return isNewsEditor(); }
+
+    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+    function isBootstrapAdmin(userId) {
+      return isOwner(userId) && (
+        request.auth.token.get('email', '').lower() == 'copyrightofficialco@gmail.com' ||
+        request.auth.token.get('email', '').lower() == 'omarmagedugm@ittihad.club'
+      );
+    }
+    function isValidId(id) { return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_-]+$'); }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+
+    // User Profile Validation
+    function isValidUser(data) {
+      return (data.get('name', '') is string) && (data.get('name', '').size() <= 100) &&
+             (data.get('email', '') is string) && (data.get('email', '').size() <= 100) &&
+             (!('uid' in data) || (data.uid is string && data.uid.size() <= 128)) &&
+             (!('role' in data) || (data.role in ['user', 'writer', 'moderator', 'admin'])) &&
+             (!('avatar' in data) || (data.avatar is string && data.avatar.size() <= 5000)) &&
+             (!('location' in data) || (data.location is string && data.location.size() <= 500)) &&
+             (!('joinDate' in data) || (data.joinDate is string && data.joinDate.size() <= 100)) &&
+             (!('username' in data) || (data.username is string && data.username.size() <= 100)) &&
+             (!('tier' in data) || (data.tier is string)) &&
+             (!('bio' in data) || (data.bio is string && data.bio.size() <= 2000)) &&
+             (!('stats' in data) || (data.stats is map)) &&
+             (!('bookmarks' in data) || (data.bookmarks is list)) &&
+             (!('fcmToken' in data) || (data.fcmToken is string)) &&
+             (!('lastActive' in data) || (data.lastActive is string));
+    }
+
+    match /test/connection {
+      allow read: if true;
+    }
+
+    match /live_comments/{commentId} {
+      allow read: if true;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid;
+      allow update: if isSignedIn() && (isAdmin() || (resource.data.userId == request.auth.uid && incoming().diff(existing()).affectedKeys().hasOnly(['text'])));
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.userId == request.auth.uid);
+    }
+
+    match /live_viewers/{viewerId} {
+      allow read: if true;
+      allow create, update: if isValidId(viewerId) &&
+                               (incoming().channel in ['football', 'basketball', 'programs', 'custom', 'all'] || (incoming().channel is string && incoming().channel.size() <= 100));
+      allow delete: if true;
+    }
+
+    match /users/{userId} {
+      allow read: if true;
+      allow create: if isOwner(userId) && 
+                      incoming().keys().hasAll(['name', 'email']) &&
+                      isValidUser(incoming());
+      allow update: if (
+        isOwner(userId) && (
+          (incoming().diff(existing()).affectedKeys().hasOnly(['lastActive', 'fcmToken'])) ||
+          (
+            isValidUser(incoming()) &&
+            (!('role' in incoming()) || !('role' in existing()) || incoming().role == existing().role || isBootstrapAdmin(userId))
+          )
+        )
+      ) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // App Settings
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor();
+    }
+
+    match /appSettings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor();
+    }
+
+    // Media
+    function isValidMedia(data) {
+      return data.title is string && data.title.size() <= 500 &&
+             data.type in ['video', 'photo'] &&
+             (!('url' in data) || (data.url is string && data.url.size() <= 5000)) &&
+             (!('playlistId' in data) || (data.playlistId is string)) &&
+             (!('source' in data) || (data.source is string));
+    }
+    match /media/{mediaId} {
+      allow read: if true;
+      allow create: if (isMediaEditor() || isAdmin()) && isValidMedia(incoming());
+      allow update: if ((isMediaEditor() || isAdmin()) && isValidMedia(incoming())) ||
+                       (incoming().diff(existing()).affectedKeys().hasOnly(['views', 'likes', 'likedBy', 'shares']));
+      allow delete: if isMediaEditor() || isAdmin();
+    }
+
+    match /media_playlists/{playlistId} {
+      allow read: if true;
+      allow write: if isMediaEditor() || isAdmin();
+    }
+
+    // News
+    function isValidNews(data) {
+      return data.title is string && data.title.size() <= 500 &&
+             (!('content' in data) || (data.content is string && data.content.size() <= 100000)) &&
+             (!('author' in data) || (data.author is string));
+    }
+    match /news/{newsId} {
+      allow read: if true;
+      allow create: if (isAdmin() || isWriter()) && isValidNews(incoming());
+      allow update: if ((isAdmin() || isWriter()) && isValidNews(incoming())) ||
+                       (incoming().diff(existing()).affectedKeys().hasOnly(['views', 'shares', 'reactions', 'likes', 'likedBy']));
+      allow delete: if isAdmin() || isWriter();
+    }
+
+    // Matches
+    match /matches/{matchId} {
+      allow read: if true;
+      allow write: if isAdmin() || isMatchesEditor();
+    }
+
+    // Clubs
+    match /clubs/{clubId} {
+      allow read: if true;
+      allow write: if isAdmin() || isMatchesEditor() || isLayoutEditor();
+    }
+
+    // Polls
+    match /polls/{pollId} {
+      allow read: if true;
+      allow create, delete: if isAdmin() || isLayoutEditor() || isUserManager();
+      allow update: if isSignedIn() && (
+        incoming().diff(existing()).affectedKeys().hasOnly(['votes', 'voters', 'voterChoices'])
+      );
+    }
+
+    // Predictions
+    function isMoreThan24hBeforeMatch(matchId) {
+      // Allow if the match doesn't exist (safety) or if it's more than 24h away
+      // We use get() to fetch the match data. Note: match.date should be ISO string
+      let matchPath = /databases/$(database)/documents/matches/$(matchId);
+      return !exists(matchPath) || timestamp(get(matchPath).data.date) > request.time + duration.value(24, 'h');
+    }
+
+    match /predictions/{predictionId} {
+      allow read: if true;
+      allow create: if isSignedIn() && 
+                      incoming().userId == request.auth.uid && 
+                      isMoreThan24hBeforeMatch(incoming().matchId);
+      allow update: if isSignedIn() && 
+                      resource.data.userId == request.auth.uid && 
+                      isMoreThan24hBeforeMatch(resource.data.matchId);
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.userId == request.auth.uid);
+    }
+
+    // Fan Posts
+    match /fan_posts/{postId} {
+      allow read: if true;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid;
+      allow update: if isSignedIn() && (
+        (resource.data.userId == request.auth.uid && incoming().diff(existing()).affectedKeys().hasOnly(['content', 'image', 'location', 'poll'])) ||
+        (incoming().diff(existing()).affectedKeys().hasOnly(['likes', 'likedBy', 'poll', 'commentsCount']))
+      );
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.userId == request.auth.uid);
+
+      match /comments/{commentId} {
+        allow read: if true;
+        allow create: if isSignedIn();
+        allow update: if isSignedIn() && resource.data.userId == request.auth.uid && incoming().diff(existing()).affectedKeys().hasOnly(['text']);
+        allow delete: if isAdmin() || (isSignedIn() && resource.data.userId == request.auth.uid);
+      }
+    }
+
+    // City Info
+    match /city_info/{id} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor();
+    }
+
+    match /admins/{adminId} {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    // Products (Store)
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isAdmin() || isStoreEditor();
+    }
+
+    // Orders
+    match /orders/{orderId} {
+      allow create: if isSignedIn();
+      allow read: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin() || isStoreEditor());
+      allow update: if isAdmin() || isStoreEditor();
+      allow delete: if isAdmin() || isStoreEditor();
+    }
+
+    // Bookmarks (Saved Posts)
+    match /bookmarks/{bookmarkId} {
+      allow read: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid;
+      allow delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+
+    // AI Usage Logs
+    match /ai_generation_logs/{logId} {
+      allow read: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      allow create: if isSignedIn() && incoming().userId == request.auth.uid;
+      allow delete: if isAdmin();
+    }
+
+    // AI Usage Quota Tracking
+    match /ai_usage/{usageId} {
+      allow read: if isSignedIn() && (usageId.startsWith(request.auth.uid) || isAdmin());
+      allow create: if isSignedIn() && (usageId.startsWith(request.auth.uid) || isAdmin()) && incoming().userId == request.auth.uid;
+      allow update: if isSignedIn() && (usageId.startsWith(request.auth.uid) || isAdmin());
+      allow delete: if isAdmin();
+    }
+
+    // Club History
+    match /club_stats/{id} { allow read: if true; allow write: if isAdmin() || isLayoutEditor(); }
+    match /club_titles/{id} { allow read: if true; allow write: if isAdmin() || isLayoutEditor(); }
+    match /club_timeline/{id} { allow read: if true; allow write: if isAdmin() || isLayoutEditor(); }
+    match /club_stadiums/{id} { allow read: if true; allow write: if isAdmin() || isLayoutEditor(); }
+
+    // Music, Radio and Books
+    match /songs/{id} { allow read: if true; allow write: if isAdmin() || isMediaEditor(); }
+    match /albums/{id} { allow read: if true; allow write: if isAdmin() || isMediaEditor(); }
+    match /playlists/{id} { allow read: if true; allow write: if isAdmin() || isMediaEditor(); }
+    match /books/{id} { allow read: if true; allow write: if isAdmin() || isMediaEditor(); }
+    match /radio_stations/{id} { 
+      allow read: if true; 
+      allow write: if isAdmin() || isMediaEditor() || isMatchesEditor() || isLayoutEditor() || isUserManager(); 
+      allow update: if (isAdmin() || isMediaEditor() || isMatchesEditor() || isLayoutEditor() || isUserManager()) ||
+                       (incoming().diff(existing()).affectedKeys().hasOnly(['currentListeners', 'likes', 'reactions', 'listeners']));
+    }
+    match /radio_comments/{commentId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.userId == request.auth.uid);
+    }
+
+    // Notifications
+    match /notifications/{id} {
+      allow read: if isSignedIn() && (resource.data.target in ['all', request.auth.uid] || isAdmin() || isUserManager());
+      allow write: if isAdmin() || isUserManager();
+      allow update: if isSignedIn() && (incoming().diff(existing()).affectedKeys().hasOnly(['readBy']));
+    }
+
+    // FCM Tokens
+    // AI Transformation
+    match /jerseys/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /fcm_tokens/{tokenId} {
+      allow read: if isAdmin();
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    match /onesignal_subscriptions/{subId} {
+      allow read: if isAdmin();
+      allow create, update: if true;
+      allow delete: if isAdmin();
+    }
+
+    // Match Day Moments
+    function isValidMoment(data) {
+      return data.keys().hasAll(['userId', 'matchId', 'content', 'createdAt', 'likes', 'likedBy']) &&
+             data.userId == request.auth.uid &&
+             data.content is string && data.content.size() <= 5000 &&
+             data.matchId is string &&
+             data.likes is number &&
+             data.likedBy is list;
+    }
+
+    match /match_day_moments/{momentId} {
+      allow read: if true;
+      allow create: if isSignedIn() && isValidMoment(incoming());
+      allow update: if isSignedIn() && (
+        (resource.data.userId == request.auth.uid && incoming().diff(existing()).affectedKeys().hasOnly(['content', 'image'])) ||
+        (incoming().diff(existing()).affectedKeys().hasOnly(['likes', 'likedBy']))
+      );
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.userId == request.auth.uid);
+    }
+
+    // Match Day Attendance Polls
+    match /match_day_attendance/{pollId} {
+      allow read: if true;
+      allow create, update: if isSignedIn();
+    }
+
+    // Fan Comments (General/Standalone)
+    match /fan_comments/{commentId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow delete: if isAdmin();
+    }
+
+    // News Categories & Layouts
+    match /news_categories/{id} { allow read: if true; allow write: if isAdmin() || isNewsEditor(); }
+    match /ads/{adId} { allow read: if true; allow write: if isAdmin() || isLayoutEditor(); }
+    match /home_sections/{id} { allow read: if true; allow write: if isAdmin() || isLayoutEditor(); }
+
+    // Custom Pages
+    match /custom_pages/{pageId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor();
+    }
+
+    // Club Members Section
+    match /club_committees/{committeeId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor() || isUserManager();
+    }
+
+    match /club_announcements/{announcementId} {
+      allow read: if true;
+      allow write: if isAdmin() || isNewsEditor() || isLayoutEditor() || isUserManager();
+    }
+
+    match /club_services/{serviceId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor() || isUserManager();
+    }
+
+    match /club_members_settings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor();
+    }
+
+    match /club_trips/{tripId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor() || isUserManager();
+    }
+
+    match /member_discounts/{discountId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor() || isUserManager();
+    }
+
+    // Audit Logs
+    match /audit_logs/{logId} {
+      allow read: if isAdmin() || isUserManager();
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin();
+    }
+
+    // Ittihadawy Business Directory
+    match /businesses/{businessId} {
+      allow read: if true;
+      allow create: if isSignedIn() && incoming().ownerId == request.auth.uid && incoming().status == 'pending';
+      allow update: if isAdmin() || 
+                      (isSignedIn() && resource.data.ownerId == request.auth.uid) ||
+                      (incoming().diff(existing()).affectedKeys().hasOnly(['stats']));
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.ownerId == request.auth.uid);
+    }
+
+    match /business_updates/{updateId} {
+      allow read: if isAdmin() || (isSignedIn() && resource.data.ownerId == request.auth.uid);
+      allow create: if isSignedIn() && incoming().ownerId == request.auth.uid && incoming().status == 'pending';
+      allow update: if isAdmin();
+      allow delete: if isAdmin() || (isSignedIn() && resource.data.ownerId == request.auth.uid);
+    }
+
+    match /business_reports/{reportId} {
+      allow read: if isAdmin();
+      allow create: if true;
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // World Fans Association (رابطة اتحاداوية العالم)
+    match /world_countries/{countryId} {
+      allow read: if true;
+      allow write: if isAdmin() || isUserManager() || isLayoutEditor();
+    }
+
+    match /world_groups/{groupId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isAdmin() || isUserManager() || isLayoutEditor() || (isSignedIn() && (resource.data.get('adminUid', '') == request.auth.uid || incoming().diff(existing()).affectedKeys().hasOnly(['memberCount', 'eventsCount', 'postsCount', 'galleryCount'])));
+      allow delete: if isAdmin() || isUserManager() || isLayoutEditor() || (isSignedIn() && resource.data.get('adminUid', '') == request.auth.uid);
+    }
+
+    match /world_posts/{postId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isAdmin() || isUserManager() || (isSignedIn() && (resource.data.authorId == request.auth.uid || incoming().diff(existing()).affectedKeys().hasOnly(['likes', 'likedBy', 'commentsCount', 'comments', 'pinned'])));
+      allow delete: if isAdmin() || isUserManager() || (isSignedIn() && resource.data.authorId == request.auth.uid);
+    }
+
+    match /world_events/{eventId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isAdmin() || isUserManager() || isSignedIn();
+      allow delete: if isAdmin() || isUserManager() || (isSignedIn() && resource.data.get('authorId', '') == request.auth.uid);
+    }
+
+    match /world_group_members/{memberId} {
+      allow read: if true;
+      allow write: if isSignedIn();
+    }
+
+    match /world_group_gallery/{itemId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin() || isUserManager() || (isSignedIn() && resource.data.get('uploadedBy', '') == request.auth.uid);
+    }
+
+    match /world_help_requests/{requestId} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update: if isAdmin() || isUserManager() || (isSignedIn() && (resource.data.userId == request.auth.uid || incoming().diff(existing()).affectedKeys().hasOnly(['repliesCount', 'replies', 'status'])));
+      allow delete: if isAdmin() || isUserManager() || (isSignedIn() && resource.data.userId == request.auth.uid);
+    }
+
+    match /world_applications/{applicationId} {
+      allow read: if isAdmin() || isUserManager() || (isSignedIn() && resource.data.get('userId', '') == request.auth.uid);
+      allow create: if true;
+      allow update, delete: if isAdmin() || isUserManager();
+    }
+
+    // Audit Logs & Recycle Bin (سجل نشاط المشرفين وسلة المحذوفات)
+    match /audit_logs/{logId} {
+      allow read: if isAdmin() || isUserManager();
+      allow create: if isSignedIn();
+      allow update, delete: if isAdmin();
+    }
+
+    // Public Audience Services (خدمات الجمهور)
+    match /public_services/{serviceId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor();
+    }
+
+    // Education Videos (فيديوهات التعليم المجاني)
+    match /education_videos/{videoId} {
+      allow read: if true;
+      allow write: if isAdmin() || isLayoutEditor() || isMediaEditor();
+    }
+
+    // Service Suggestions from fans
+    match /service_suggestions/{id} {
+      allow read: if isAdmin() || isLayoutEditor();
+      allow create: if true;
+      allow update, delete: if isAdmin() || isLayoutEditor();
+    }
+
+    // Direct Firestore Image Storage & Subcollections
+    match /app_images/{imageId}/{document=**} {
+      allow read: if true;
+      allow create, update: if isSignedIn() || isAdmin();
+      allow delete: if isAdmin();
+    }
+    match /app_images/{imageId} {
+      allow read: if true;
+      allow create, update: if isSignedIn() || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Global Admin Override
+    match /{document=**} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
